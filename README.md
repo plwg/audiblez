@@ -26,7 +26,8 @@ On my M2 MacBook Pro, on CPU, it takes about 1 hour, at a rate of about 60 chara
 
 ## How to install and run
 
-If you have Python 3 on your computer, you can install it with pip.
+If you have Python 3 on your computer, you can install the package with [`uv`](https://github.com/astral-sh/uv).
+
 You also need `espeak-ng` and `ffmpeg` installed on your machine:
 
 ```bash
