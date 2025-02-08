@@ -5,6 +5,12 @@
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/audiblez)
 ![PyPI - Version](https://img.shields.io/pypi/v/audiblez)
 
+### Note on Fork
+
+This is a fork of the [original repo](https://github.com/santinic/audiblez), using the package manager [uv](https://github.com/astral-sh/uv).
+
+The goal is to make the project easier to install and invoke (via `uv tool`).
+
 ### v3 Now with CUDA support and many more languages!
 
 Audiblez generates `.m4b` audiobooks from regular `.epub` e-books,
@@ -24,7 +30,11 @@ If you have Python 3 on your computer, you can install it with pip.
 You also need `espeak-ng` and `ffmpeg` installed on your machine:
 
 ```bash
-pip install audiblez
+# Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install it as a uv tool, using this repo
+uv tool install git+https://github.com/plwg/audiblez
 
 sudo apt install ffmpeg espeak-ng     # on Ubuntu/Debian 🐧
 brew install ffmpeg espeak-ng         # on Mac 🍏
