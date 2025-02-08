@@ -1,10 +1,10 @@
 [project]
 name = "audiblez"
 version = "0.3.5"
-description = "Generate audiobooks from e-books (epub to wav/m4b)"
 authors = [
     { name = "Claudio Santini", email = "hireclaudio@gmail.com" }
 ]
+description = "Generate audiobooks from e-books (epub to wav/m4b)"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
 dependencies = [
@@ -16,22 +16,13 @@ dependencies = [
     "spacy (>=3.8.3,<4.0.0)",
     "yaspin (>=3.1.0,<4.0.0)",
     "kokoro (>=0.7.9,<0.8.0)",
-    "misaki[zh] (>=0.7.10,<0.8.0)"
+    "misaki[zh] (>=0.7.10,<0.8.0)",
+    "pip>=25.0",
 ]
-
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
-
-[project.urls]
-Homepage = "https://claudio.uk/posts/epub-to-audiobook.html"
-Documentation = "https://github.com/santinic/audiblez"
-Repository = "https://github.com/santinic/audiblez"
-Issues = "https://github.com/santinic/audiblez/issues"
 
 [project.scripts]
 audiblez = "audiblez:cli_main"
 
-[tool.poetry.group.dev.dependencies]
-deptry = "^0.23.0"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
